@@ -25,7 +25,7 @@ const IntroSection = () => (
       </p>
     </div>
     <div className={styles.photoContainer}>
-      <img src="/charterpic.jpg" className={styles.photo} alt="Alice Hou" />
+      <img src="/charterpic2.jpg" className={styles.photo} alt="Alice Hou" />
     </div>
   </section>
 );
