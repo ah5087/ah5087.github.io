@@ -33,7 +33,8 @@ const experiences = [
     title: "Software Engineering Intern",
     company: "Erie Insurance Group",
     date: "May 2024 – present",
-    // description: "In progress.",
+    description:
+      "Develop in React Native to resolve defects and implement new features for the Erie Insurance IOS/Android mobile app. Presented POC for a new in-app review feature, securing approval for release. Integrate and test REST APIs with soapUI, ensuring seamless data communication, working in Agile sprints.",
   },
 ];
 
