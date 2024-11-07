@@ -42,6 +42,11 @@ const coursework = [
     title: "Introduction to Reinforcement Learning",
     color: "#636363",
   },
+  {
+    code: "cos470",
+    title: "Principles of Blockchains",
+    color: "#636363",
+  },
 ];
 
 const About = () => (
