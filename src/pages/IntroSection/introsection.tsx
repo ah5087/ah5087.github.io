@@ -1,8 +1,8 @@
-import { motion } from "framer-motion";
+import { motion, type Variants } from "framer-motion";
 import styles from "./Intro.module.scss";
 import commonStyles from "../../styles/Common.module.scss";
 
-const sentence = {
+const sentence: Variants = {
   hidden: { opacity: 0, y: 8, filter: "blur(2px)" },
   show: {
     opacity: 1,
@@ -35,6 +35,7 @@ const IntroSection = () => (
         I love building and I&apos;m always looking for opportunities to learn
         and grow, so please feel free to reach out! I&apos;d love to chat.
       </motion.p>
+
       <motion.p
         className={styles.paragraph}
         variants={sentence}
@@ -47,6 +48,7 @@ const IntroSection = () => (
         </span>
       </motion.p>
     </div>
+
     <motion.div
       className={styles.photoContainer}
       initial={{ opacity: 0, y: 6 }}
