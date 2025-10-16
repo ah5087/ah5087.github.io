@@ -1,0 +1,34 @@
+name: Deploy to User Site
+on:
+  push:
+    branches: [ main ]
+
+permissions:
+  contents: read
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - run: npm ci
+      - run: npm run build
+
+      # SPA deep-link support + ensure assets aren’t processed by Jekyll
+      - run: cp dist/index.html dist/404.html || true
+      - run: touch dist/.nojekyll
+
+      # Publish dist/ to external repo ah5087/ah5087.github.io on branch main
+      - name: Publish to user-site repo
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          personal_token: ${{ secrets.PUBLISH_TOKEN }}
+          external_repository: ah5087/ah5087.github.io
+          publish_branch: main
+          publish_dir: dist
+          force_orphan: true
