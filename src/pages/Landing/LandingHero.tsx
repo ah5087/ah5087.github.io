@@ -44,7 +44,7 @@ const LandingHero = () => {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6, ease: [0.2, 0.8, 0.2, 1] }}
       >
-        <span className={styles.typewriter}>{"hi! i’m alice!) "}</span>
+        <span className={styles.typewriter}>{"hi! i’m alice :) "}</span>
       </motion.h1>
 
       <motion.p
