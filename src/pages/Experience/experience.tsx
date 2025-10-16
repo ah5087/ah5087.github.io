@@ -9,13 +9,6 @@ const experiences = [
       "Led outreach to raise and manage a $30k+ event budget. Oversaw logistics for 4 hackathons, each with 800+ applicants.",
   },
   {
-    title: "Logistics Chair",
-    company: "Princeton Women in Entrepreneurship (PWE)",
-    date: "Sep 2022 – May 2023",
-    description:
-      "Coordinated a workshop in New York with Stuart Weitzman, Kate Spade, and Coach for 30 members, featuring an executive panel and business problem-solving workshops.",
-  },
-  {
     title: "Director of Outreach",
     company: "FemaleFounded",
     date: "Mar 2023 – Sep 2023",
@@ -32,7 +25,7 @@ const experiences = [
   {
     title: "Software Engineering Intern",
     company: "Erie Insurance Group",
-    date: "May 2024 – present",
+    date: "May 2024 – Aug 2024",
     description:
       "Develop in React Native to resolve defects and implement new features for the Erie Insurance IOS/Android mobile app. Presented POC for a new in-app review feature, securing approval for release. Integrate and test REST APIs with soapUI, ensuring seamless data communication, working in Agile sprints.",
   },
