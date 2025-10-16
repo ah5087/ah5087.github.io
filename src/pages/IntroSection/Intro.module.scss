@@ -1,88 +1,31 @@
 .introSection {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  height: 80vh; 
-  margin-top: 60px; 
-  background-color: #FFFFFF; 
-  border-radius: 8px; 
-  padding: 20px;
+  display: flex; align-items: center; justify-content: space-between;
+  min-height: 70vh; margin-top: 24px; background: #fff; border-radius: 8px;
+  padding: clamp(16px, 3vw, 24px); gap: clamp(16px, 4vw, 40px);
 }
 
-.photoContainer {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 40%; 
-  text-align: center; 
-}
+.paragraphContainer { width: 60%; padding-right: 20px; text-align: left; }
+.photoContainer     { width: 40%; display: flex; flex-direction: column; align-items: center; }
 
-.photo {
-  width: 270px; 
-  height: 270px; 
-  border-radius: 50%; 
-  object-fit: cover; 
-  margin-bottom: 20px; 
-}
+.photo { width: 270px; height: 270px; border-radius: 50%; object-fit: cover; }
 
-.introTitle {
-  font-size: 24px; 
-  font-weight: bold; 
-  display: flex;
-  align-items: center; 
-}
+.paragraph  { font-size: 18px; line-height: 1.55; margin: 8px 0; }
 
-.paragraphContainer {
-  width: 60%; 
-  padding-right: 20px; 
-  text-align: left;
-}
+.typewriter { font-family: 'Fira Code', monospace; font-size: 16px; }
 
-.paragraph {
-  font-size: 18px; 
-  line-height: 1.5; 
-}
-
-.typewriter {
-  font-family: 'Fira Code', monospace; 
-  font-size: 16px; 
+@keyframes typewriter { from { width: 0; } to { width: 7.5ch; } }
+@keyframes blinkCursor { from { border-right-color: rgba(0,0,0,0.75); } to { border-right-color: transparent; } }
+.paragraph .typewriter {
+  overflow: hidden; border-right: solid rgba(0,0,0,0.75); white-space: nowrap;
+  animation: typewriter 1s steps(10, end) 1s 1 both, blinkCursor .75s steps(40, end) infinite;
 }
 
 @media (max-width: 600px) {
-  .introSection {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    height: auto;
-    margin-top: 20px;
-  }
-
-  .photoContainer,
-  .paragraphContainer {
-    width: 100%;
-    padding: 0;
-  }
-
-  .paragraphContainer {
-    margin-top: 20px;
-  }
+  .introSection { flex-direction: column; align-items: center; text-align: center; min-height: auto; margin-top: 20px; }
+  .photoContainer, .paragraphContainer { width: 100%; padding: 0; }
+  .paragraphContainer { margin-top: 16px; }
 }
 
-@keyframes typewriter {
-  from { width: 0; }
-  to { width: 7.5ch; }
-}
-
-@keyframes blinkCursor {
-  from { border-right-color: rgba(0, 0, 0, 0.75); }
-  to { border-right-color: transparent; }
-}
-
-.introTitle .text {
-  overflow: hidden;
-  border-right: solid rgba(0, 0, 0, 0.75);
-  white-space: nowrap;
-  animation: 
-    typewriter 1s steps(10, end) 1s 1 normal both, 
-    blinkCursor .75s steps(40, end) infinite;
+@media (prefers-reduced-motion: reduce) {
+  .introSection, .paragraph, .photoContainer { animation: none !important; transition: none !important; }
 }
